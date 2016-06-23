@@ -1,0 +1,44 @@
+
+ [ {
+ 	"id":1,
+    "name": "Angular Boot Camp1",
+    "date": "1/1/2013",
+    "time": "10:30 am",
+    "location": {
+      "address": "Google HeadQuarter",
+      "city": "Mountain View",
+      "province": "CA"
+    }
+  },{
+  	"id":2,
+    "name": "Code Camp",
+    "date": "03/15/2013",
+    "time": "10:30 am",
+    "location": {
+      "address": "123 Wall St",
+      "city": "New York",
+      "province": "NY"
+    }
+  },
+  {
+  	"id":3,
+    "name": "Code Retreat",
+    "date": "03/16/2013",
+    "time": "11:30 am",
+    "location": {
+      "address": "42 Wallaby Way",
+      "city": "Sydney",
+      "province": "AU"
+    }
+  },
+  {
+  	"id":4,
+    "name": "Fall code camp",
+    "date": "1/1/2010",
+    "time": "10:30 am",
+    "location": {
+      "address": "123 fake st",
+      "city": "riverton",
+      "province": "ut"
+    }
+  }]

@@ -1,0 +1,34 @@
+<div style="padding-left:20px; padding-right:20px">
+		<div class="container">
+			<h1>New Event</h1>
+			<hr/>
+			<form name="newEventForm">
+				<fieldset>
+					<label for="eventName">Event Name:</label>
+					<input id="eventName" type="text" required ng-model="event.name" placeholder="Name of your event...."/><br/>
+					<label for="eventDate">Event Date:</label>
+					<input id="eventDate" type="text" date-keys ng-pattern='/^[0,1]?\d{1}\/(([0-2]?\d{1})|([3][0,1]{1}))\/(([1]{1}[9]{1}[9]{1}\d{1})|([2-9]{1}\d{3}))$/' required ng-model="event.date" placeholder="format (mm/dd/yyyy)..."/><br/>
+						<label for="eventTime">Event Time:</label>
+					<input id="eventTime" type="text" ng-model="event.time" placeholder="start and end time..."/><br/>
+						<label for="eventLocation">Event Location State:</label>
+					<input id="eventLocation" type="text" ng-model="event.location.state" placeholder="Address of event..."/><br/>
+					<br/>
+					<input id="eventCity" type="text" ng-model="event.location.city" class="input-small" placeholder="City..."/>
+					<input id="eventProvince" type="text" ng-model="event.location.province" class="input-small" placeholder="Province.."/><br/><br/>
+
+					<label for="eventImageUrl">Image:</label>
+					<input id="eventImageUrl" type="url" ng-model="event.imageUrl" class="input-xlarge" placeholder="Url of Image..."/><br/>
+					
+				</fieldset>
+				<img ng-src="{{event.imageUrl}}" alt="not displayed">
+				<br/>
+				<br/>
+					<!-- ng-disabled="newEventForm.$invalid" -->
+				<button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event, newEventForm)" class="btn btn-primary">Save</button>
+				<button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>
+			</form>
+
+		</div>
+</div>
+		
+	

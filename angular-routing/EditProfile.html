@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="eventsApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.votingWidget{
+			text-align: center;
+		}
+	</style>
+  <!-- <base href="/angularprac/angular-routing/"> -->
+</head>
+<body>
+<div class="container" ng-controller="EditProfileController">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+           <A href="#" >Edit Profile</A>
+
+        <A href="#" >Logout</A>
+       <br>
+<p class=" text-info">May 05,2014,03:00 pm </p>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ghanshyam Sharma </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center">
+                <gravatar email="{{user.emailAddress}}"/> </div>
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-9 col-lg-9 "> 
+                <form name="profileForm">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>User Name:</td>
+                        <td><input placeholder="Username" required ng-pattern="/^[-A-Za-z0-9]{2,20}$/" type="text" ng-model="user.userName"></td>
+                      </tr>
+                      <tr>
+                        <td>Password:</td>
+                        <td><input placeholder="Password" ng-model="user.password" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td>Name:</td>
+                        <td><input placeholder="name" ng-model="user.name" type="text"></td>
+                      </tr>
+                   
+                       
+                             <tr>
+                        <td>Email Address:</td>
+                        <td><input placeholder="Email Address" ng-model="user.emailAddress" type="text"></td>
+                      </tr>
+                        <tr>
+                        <td>Bio:</td>
+                        <td><textarea placeholder="Bio.." name="" id="" cols="30" rows="10" ng-model="user.bio"></textarea></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <a href="#" class="btn btn-primary">Save</a>
+                  <a href="#" class="btn btn-primary">Cancel</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+	
+<!-- <script src="js/jquery.js"></script> -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/angular.min.js"></script>
+  <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+	<!-- <script src="js/angular-sanitize.js"></script> -->
+	<!-- <script src="js/angular-cookies.min.js"></script> -->
+	<script src="app.js"></script>
+	<script src="controller/EditProfileController.js"></script>
+	<script src="services/GravatarUrlBuilder.js"></script>
+    <script src="directives/gravtar.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

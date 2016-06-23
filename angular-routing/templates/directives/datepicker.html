@@ -1,0 +1,54 @@
+<style>
+.date-picker{
+	max-width: 40%;
+}
+	.year,.month,.days,.date{
+		display:flex;
+	}
+	.calendar-nav-left{
+flex:1;
+	}
+	.calendar-hdr{
+flex:2;
+	}
+	.calendar-nav-right{
+flex:1;
+	}
+	.days>div{
+		flex:1;
+	}
+	.date>div{
+		flex:1;
+	}
+</style>
+<div class="date-picker " ng-show="showDatePicker">
+	<div class="calendar no-select">
+			<div class="row year calendar-nav">
+				<div class="calendar-nav-left pointer" ng-click="previousYear()"><i class="glyphicon glyphicon-chevron-left"></i></div>
+				<div class="calendar-hdr">
+					{{calendar.year}}
+				</div>
+				<div class="calendar-nav-right pointer" ng-click="nextYear()"><i class="glyphicon glyphicon-chevron-right"></i></div>
+			</div>
+			<div class="row month calendar-nav">
+				<div class="calendar-nav-left pointer" ng-click="previousMonth()"><i class="glyphicon glyphicon-chevron-left"></i></div>
+				<div class="calendar-hdr">
+				{{calendar.monthName}}
+				</div>
+				<div class="calendar-nav-right pointer" ng-click="nextMonth()"><i class="glyphicon glyphicon-chevron-right"></i></div>
+			</div>
+			<div class="row days">
+				<div>Sun</div>
+				<div>Mon</div>
+				<div>Tue</div>
+				<div>Wed</div>
+				<div>Thu</div>
+				<div>Fri</div>
+				<div>Sat</div>
+			</div>
+			<div class="row date">
+				<div class="pointer" ng-repeat="day in days track by $index" ng-click="selectDate(day)">{{day}}</div>
+			</div>
+	</div>
+</div>
+<br/>

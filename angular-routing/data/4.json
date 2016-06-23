@@ -1,0 +1,63 @@
+{
+	"name": "Fall code camp",
+    "date": "1/1/2010",
+    "time": "10:30 am",
+    "location": {
+      "address": "123 fake st",
+      "city": "riverton",
+      "province": "ut"
+    },
+			"imageUrl": "images/logo-vertical.png",
+			"sessions":[
+				{
+					"id":1,
+					"name": "Directives Masterclass",
+					"creatorName":"Bob Smith",
+					"duration":1,
+					"level": "Advanced",
+					"abstract": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ab voluptatibus illum omnis, atque! In voluptatum expedita illo velit. Quaerat sapiente, perspiciatis tenetur veniam quam corporis repellendus, totam autem quos?",
+					"upVoteCount":0
+
+				},
+				{
+					"id":2,
+					"name": "Scopes for fun and profit",
+					"creatorName":"John Doe",
+					"duration":3,
+					"level": "Introductory",
+					"abstract": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ab voluptatibus illum omnis, atque! In voluptatum expedita illo velit. Quaerat sapiente, perspiciatis tenetur veniam quam corporis repellendus, totam autem quos?",
+					"upVoteCount":0
+
+				},
+				{
+					"id":3,
+					"name": "Well Behaved Controller",
+					"creatorName":"Jane Doe",
+					"duration":2,
+					"level": "Intermediate",
+					"abstract": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ab voluptatibus illum omnis, atque! In voluptatum expedita illo velit. Quaerat sapiente, perspiciatis tenetur veniam quam corporis repellendus, totam autem quos?",
+					"upVoteCount":0
+
+				},
+				{
+					"id":4,
+					"name": "4Well Behaved Controller",
+					"creatorName":"Jane Doe",
+					"duration":2,
+					"level": "Intermediate",
+					"abstract": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ab voluptatibus illum omnis, atque! In voluptatum expedita illo velit. Quaerat sapiente, perspiciatis tenetur veniam quam corporis repellendus, totam autem quos?",
+					"upVoteCount":0
+
+				},
+				{
+					"id":5,
+					"name": "5Well Behaved Controller",
+					"creatorName":"Jane Doe",
+					"duration":2,
+					"level": "Intermediate",
+					"abstract": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ab voluptatibus illum omnis, atque! In voluptatum expedita illo velit. Quaerat sapiente, perspiciatis tenetur veniam quam corporis repellendus, totam autem quos?",
+					"upVoteCount":0
+
+				}
+			]
+}

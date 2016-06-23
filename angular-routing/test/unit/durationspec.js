@@ -1,0 +1,8 @@
+'use strict';
+
+describe('durations', function(){
+	beforeEach(module('eventsApp'));
+	it('should return "Half hour" when given a 1',inject(function(durationsFilter){
+		expect(durationsFilter(2)).toEqual('1 hours');
+	}))
+})
