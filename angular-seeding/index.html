@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="eventsApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.votingWidget{
+			text-align: center;
+		}
+	</style>
+</head>
+<body ng-cloak>
+	<div class="container">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<ul class="nav">
+				<li><a href="NewEvent.html">Create Event</a></li>
+			</ul>
+		</div>
+	</div>
+		
+		<div ng-controller="EventController">
+		<img ng-src="{{event.imageUrl}}" class="img-circle sm" style="width:300px;" alt="{{event.name}}">
+		<button type="button" class="btn btn-primary" ng-click="scrollToSession('session1')">Scroll</button>
+		<div class="row">
+			<div class="col-md-11">
+				<h2 ng-class="myclass" ng-bind-template="{{event.name | uppercase}} {{event.date}}"></h2>
+			</div>
+		</div>
+		<button class="btn btn-default" ng-disabled="buttonDisabled">Disable</button>
+		<div ng-non-bindable>{{1+2}}</div>
+		<div >some title</div>
+		<div >Some title</div>
+		<h2 ng-show="boolValue">Show This</h2>
+		<h2 ng-hide="boolValue">Hide This</h2>
+		<div class="row">
+			<div class="col-md-3">
+				<div><strong>Date:</strong>{{event.date | date:'mediumDate'}}</div>
+				<div><strong>Date:</strong>{{event.time}}</div>
+			</div>
+			<div class="col-md-4">
+				<address>
+					<strong>Address:</strong>{{event.location.address}}<br/>
+					{{event.location.city}},{{event.location.provinces}}
+
+				</address>
+			</div>
+		</div>
+		<div>{{3.142525252 | number:2}}</div>
+		<div>{{ {a:3, b:"h1", c:{aa:35} } | json}}</div>
+			<hr/>
+			<h3>Sessions</h3>
+			Order BY:
+			<select ng-model="sortorder" class="input-small">
+				<option selected value="name">Name</option>
+				<option value="upVoteCount">Votes</option>
+			</select>
+			Show:
+			<select ng-model="query.level" class="input-small">
+				<option selected value="">All</option>
+				<option value="introductory">Introductory</option>
+				<option value="Intermediate">Intermediate</option>
+				<option value="advanced">Advanced</option>
+			</select>
+			<ul class="thumbnails">
+				<li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query" id="session{{session.id}}">
+				
+				<div class="row ">
+				<div class="col-md-1 well votingWidget" >
+					<div class="votingButton" ng-click="increment(session)">
+						<i class="glyphicon glyphicon-chevron-up"></i>
+					</div>
+					<div class="badge badge-inverse">
+						<div>{{session.upVoteCount}}</div>
+					</div>
+					<div class="votingButton" ng-click="decrement(session)">
+							<i class="glyphicon glyphicon-chevron-down"></i>
+						</div>
+				</div>
+					<div class="well col-md-9">
+						<h4 class="well-title">{{session.name}}</h4>
+						<h6 style="margin-top:-10px">{{session.creatorName}}</h6>
+						<span>Duration: {{session.duration | durations }}</span>
+						<span>Level: {{session.level}}</span>
+						<p>{{session.abstract}}</p>
+
+					</div>
+				</div>
+					
+				</li>
+			</ul>
+			
+
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script> -->
+	<!-- <script src="js/angular-sanitize.js"></script> -->
+	<script src="js/angular-resource.min.js"></script>
+	<script src="js/angular-cookies.min.js"></script>
+	<script src="app.js"></script>
+	<script src="filter.js"></script>
+	<script src="controller/EventController.js"></script>
+	<script src="services/EventData.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
